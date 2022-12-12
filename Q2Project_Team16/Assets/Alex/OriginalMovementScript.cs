@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class OriginalMovementScript : MonoBehaviour
 {
-    bool grounded = false;
+    public bool grounded = false;
     Rigidbody2D rb2;
     SpriteRenderer sr;
 
@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float horizValue = Input.GetAxis("Horizontal");
 
         rb2.velocity = new Vector2(horizValue * 4, rb2.velocity.y);
