@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Swing : MonoBehaviour
 {
     public Rigidbody2D rb;
     private HingeJoint2D hj;
@@ -12,9 +12,10 @@ public class Player : MonoBehaviour
     public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
+    public Collider2D col;
+
 
     
-
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -27,27 +28,36 @@ public class Player : MonoBehaviour
         CheckKeyboardInputs();
     }
 
-
-
+    
+    void Start()
+    {
+        void Detach() 
+        {
+            Debug.Log("Yay");
+            hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
+            attached = false;
+            hj.enabled = false;
+            hj.connectedBody = null;
+        }
+    }
 
     void CheckKeyboardInputs()
     {
-        if(Input.GetKey("a") || Input.GetKey("left"))
-        {
-            Debug.Log("movement yay");
+            if (Input.GetKey("a") || Input.GetKey("left"))
+        { 
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(-1, 0, 0) * pushForce);
             }
         }
-        if(Input.GetKey("d") || Input.GetKey("right"))
+        if (Input.GetKey("d") || Input.GetKey("right"))
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if((Input.GetKeyDown("w")|| Input.GetKeyDown("up")) && attached)
+        if ((Input.GetKeyDown("w") || Input.GetKeyDown("up")) && attached)
         {
             Slide(1);
         }
@@ -55,8 +65,8 @@ public class Player : MonoBehaviour
         {
             Slide(-1);
         }
-        if (Input.GetButtonDown("Jump"))
-        {
+        if (Input.GetButtonDown("Jump") && attached)
+        { 
             Detach();
         }
 
@@ -68,7 +78,7 @@ public class Player : MonoBehaviour
             attached = true;
             attachedTo = ropeBone.gameObject.transform.parent;
         }
-        
+
 
         void Detach()
         {
@@ -82,11 +92,11 @@ public class Player : MonoBehaviour
         {
             RopeSegment myConnection = hj.connectedBody.gameObject.GetComponent<RopeSegment>();
             GameObject newSeg = null;
-            if(direction > 0)
+            if (direction > 0)
             {
-                if(myConnection.connectedAbove != null)
+                if (myConnection.connectedAbove != null)
                 {
-                    if(myConnection.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
+                    if (myConnection.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
                     {
                         newSeg = myConnection.connectedAbove;
                     }
@@ -94,7 +104,7 @@ public class Player : MonoBehaviour
             }
             else
             {
-                if(myConnection.connectedBelow != null)
+                if (myConnection.connectedBelow != null)
                 {
                     newSeg = myConnection.connectedBelow;
                 }
@@ -110,22 +120,24 @@ public class Player : MonoBehaviour
 
         void OnTriggerEnter2D(Collider2D col)
         {
-            if (!attached)
-            {
-                if(col.gameObject.tag == "Rope")
+             if (col.gameObject.tag == "Rope")
                 {
-                    if(attachedTo != col.gameObject.transform.parent)
+                    if (attachedTo != col.gameObject.transform.parent)
                     {
-                        if(disregard == null || col.gameObject.transform.parent.gameObject != disregard)
+                        if (disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                         {
-                            Attach(col.gameObject.GetComponent<Rigidbody2D>());
+                            Attach(col.gameObject.GetComponent<Movement>());
                         }
                     }
                 }
-            }
+            
         }
 
 
 
     }
+
+
+
+  
 }
