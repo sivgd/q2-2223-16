@@ -916,6 +916,7 @@ MonoBehaviour:
   moveSpeed: 3
   jumpForce: 5
   sr: {fileID: 2025024962}
+  rb: {fileID: 0}
 --- !u!61 &2025024960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1044,6 +1045,7 @@ MonoBehaviour:
   pushForce: 4
   attached: 0
   attachedTo: {fileID: 0}
+  col: {fileID: 2025024960}
 --- !u!233 &2025024965
 HingeJoint2D:
   m_ObjectHideFlags: 0
