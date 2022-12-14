@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public SpriteRenderer sr;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(moveInput, 0, 0) * moveSpeed * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Space)&& Mathf.Abs(rb.velocity.y)<0.001f || Input.GetKeyDown(KeyCode.W) && Mathf.Abs(rb.velocity.y) < 0.001f)
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
@@ -34,4 +34,5 @@ public class Movement : MonoBehaviour
             sr.flipX = true;
         }
     }
+
 }

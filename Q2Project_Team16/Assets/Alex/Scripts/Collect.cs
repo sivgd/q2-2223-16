@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collect : MonoBehaviour
 {
     public GameObject obj;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,8 @@ public class Collect : MonoBehaviour
         if (collision.tag == "Player")
         {
             obj.SetActive(false);
+            player.GetComponent<Movement>().jumpForce = 16;
         }
-        //make it reappear after delay
     }
 
 }
