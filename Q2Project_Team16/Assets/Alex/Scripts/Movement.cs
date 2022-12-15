@@ -24,6 +24,10 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            if(jumpForce > 11)
+            {
+                jumpForce = 11;
+            }
         }
         if (Input.GetAxis("Horizontal") > 0)
         {
