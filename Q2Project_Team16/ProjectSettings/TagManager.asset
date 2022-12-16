@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Ground
   - Rope
-  - ClimbingWall
+  - JumpItem
   layers:
   - Default
   - TransparentFX
@@ -14,8 +14,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - groundLayer
   - 
   - 
   - 
