@@ -25,8 +25,8 @@ public class Collect : MonoBehaviour
         {
             obj.SetActive(false);
             player.GetComponent<Movement>().jumpForce = 16;
-            //StartCoroutine(waitThenLoad());
         }
     }
+
 
 }
