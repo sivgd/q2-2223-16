@@ -13,28 +13,28 @@ TextureImporter:
     second: Tiger_Tail_Sheet_2
   - first:
       213: -1078019531459176249
-    second: Tiger_Tail_Sheet_3
+    second: Tiger_Tail_Sheet_21
   - first:
       213: -634930390359514731
-    second: Tiger_Tail_Sheet_4
+    second: Tiger_Tail_Sheet_21
   - first:
       213: 4978041753929490674
-    second: Tiger_Tail_Sheet_5
+    second: Tiger_Tail_Sheet_3
   - first:
       213: 8789475323178510159
     second: Tiger_Tail_Sheet_6
   - first:
       213: 1156065954769372604
-    second: Tiger_Tail_Sheet_7
+    second: Tiger_Tail_Sheet_5
   - first:
       213: -4452581229983385659
-    second: Tiger_Tail_Sheet_8
+    second: Tiger_Tail_Sheet_5
   - first:
       213: 2660619792158637487
-    second: Tiger_Tail_Sheet_9
+    second: Tiger_Tail_Sheet_5
   - first:
       213: -5317300613248391642
-    second: Tiger_Tail_Sheet_10
+    second: Tiger_Tail_Sheet_7
   - first:
       213: 2311092781676783778
     second: Tiger_Tail_Sheet_11
@@ -46,16 +46,16 @@ TextureImporter:
     second: Tiger_Tail_Sheet_13
   - first:
       213: -1597553489172682207
-    second: Tiger_Tail_Sheet_14
+    second: Tiger_Tail_Sheet_10
   - first:
       213: -7353156727673382140
     second: Tiger_Tail_Sheet_15
   - first:
       213: 6632479543010878479
-    second: Tiger_Tail_Sheet_16
+    second: Tiger_Tail_Sheet_12
   - first:
       213: 614674018229908032
-    second: Tiger_Tail_Sheet_17
+    second: Tiger_Tail_Sheet_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -214,7 +214,7 @@ TextureImporter:
       name: Tiger_Tail_Sheet_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 99
         y: 190
         width: 46
         height: 42
@@ -232,7 +232,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_3
+      name: Tiger_Tail_Sheet_4
       rect:
         serializedVersion: 2
         x: 170
@@ -253,7 +253,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_4
+      name: Tiger_Tail_Sheet_21
       rect:
         serializedVersion: 2
         x: 0
@@ -274,7 +274,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_5
+      name: Tiger_Tail_Sheet_3
       rect:
         serializedVersion: 2
         x: 88
@@ -316,7 +316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_7
+      name: Tiger_Tail_Sheet_8
       rect:
         serializedVersion: 2
         x: 8
@@ -337,7 +337,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_8
+      name: Tiger_Tail_Sheet_9
       rect:
         serializedVersion: 2
         x: 50
@@ -358,15 +358,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_9
+      name: Tiger_Tail_Sheet_5
       rect:
         serializedVersion: 2
         x: 87
         y: 112
         width: 67
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.014057558, y: 0.35465097}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -379,7 +379,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_10
+      name: Tiger_Tail_Sheet_7
       rect:
         serializedVersion: 2
         x: 207
@@ -421,12 +421,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_12
+      name: Tiger_Tail_Sheet_16
       rect:
         serializedVersion: 2
-        x: 14
+        x: 13
         y: 0
-        width: 8
+        width: 9
         height: 54
       alignment: 9
       pivot: {x: 0.40310073, y: 0.069336794}
@@ -450,7 +450,7 @@ TextureImporter:
         width: 55
         height: 38
       alignment: 9
-      pivot: {x: 0.04897801, y: 0.13280337}
+      pivot: {x: 0.93692726, y: 0.90799713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -463,11 +463,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_14
+      name: Tiger_Tail_Sheet_10
       rect:
         serializedVersion: 2
-        x: 110
-        y: 46
+        x: 111
+        y: 45
         width: 60
         height: 20
       alignment: 9
@@ -487,8 +487,8 @@ TextureImporter:
       name: Tiger_Tail_Sheet_15
       rect:
         serializedVersion: 2
-        x: 185
-        y: 7
+        x: 186
+        y: 6
         width: 52
         height: 42
       alignment: 9
@@ -505,7 +505,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_16
+      name: Tiger_Tail_Sheet_12
       rect:
         serializedVersion: 2
         x: 42
@@ -526,7 +526,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiger_Tail_Sheet_17
+      name: Tiger_Tail_Sheet_14
       rect:
         serializedVersion: 2
         x: 114
