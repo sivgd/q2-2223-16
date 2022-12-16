@@ -172,12 +172,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 102
-        width: 5
-        height: 25
+        x: 7
+        y: 191
+        width: 10
+        height: 48
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.5775193, y: 0.096253075}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_1
       rect:
         serializedVersion: 2
-        x: 15
-        y: 102
-        width: 13
-        height: 25
+        x: 50
+        y: 191
+        width: 25
+        height: 48
       alignment: 9
-      pivot: {x: -0.0088451095, y: 0.0038763427}
+      pivot: {x: 0.09689911, y: 0.096253075}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_2
       rect:
         serializedVersion: 2
-        x: 28
-        y: 104
-        width: 24
-        height: 22
+        x: 96
+        y: 190
+        width: 46
+        height: 42
       alignment: 9
-      pivot: {x: 0.00043066344, y: 0.06777087}
+      pivot: {x: 0.061846856, y: 0.09394582}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 99
-        width: 33
-        height: 18
+        x: 170
+        y: 215
+        width: 67
+        height: 20
       alignment: 9
-      pivot: {x: 0.02392139, y: 0.017657386}
+      pivot: {x: 0.048766863, y: 0.6550377}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,12 +256,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_4
       rect:
         serializedVersion: 2
-        x: 91
-        y: 115
-        width: 35
-        height: 10
+        x: 0
+        y: 138
+        width: 64
+        height: 37
       alignment: 9
-      pivot: {x: -0.007936533, y: 0.62403184}
+      pivot: {x: 0.05184107, y: 0.83521867}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 74
-        width: 34
-        height: 19
+        x: 88
+        y: 146
+        width: 63
+        height: 35
       alignment: 9
-      pivot: {x: 0.013603907, y: 0.78287786}
+      pivot: {x: 0.057031903, y: 0.10132882}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -298,12 +298,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_6
       rect:
         serializedVersion: 2
-        x: 36
-        y: 83
-        width: 35
-        height: 8
+        x: 173
+        y: 132
+        width: 67
+        height: 40
       alignment: 9
-      pivot: {x: 0.015688432, y: 0.2416029}
+      pivot: {x: 0.071907386, y: 0.11240311}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -319,12 +319,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_7
       rect:
         serializedVersion: 2
-        x: 73
-        y: 78
-        width: 35
-        height: 21
+        x: 8
+        y: 77
+        width: 20
+        height: 52
       alignment: 9
-      pivot: {x: 0.015688432, y: 0.00781359}
+      pivot: {x: 0.8100775, y: 0.06768051}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -340,12 +340,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_8
       rect:
         serializedVersion: 2
-        x: 109
-        y: 77
-        width: 12
-        height: 27
+        x: 50
+        y: 81
+        width: 37
+        height: 48
       alignment: 9
-      pivot: {x: 0.22437604, y: 0.010001289}
+      pivot: {x: 1.0447305, y: 0.096253075}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -361,12 +361,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_9
       rect:
         serializedVersion: 2
-        x: 5
-        y: 50
-        width: 10
-        height: 27
-      alignment: 9
-      pivot: {x: 0.9134366, y: 0.05593872}
+        x: 87
+        y: 112
+        width: 67
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -382,12 +382,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_10
       rect:
         serializedVersion: 2
-        x: 18
-        y: 53
-        width: 25
-        height: 25
+        x: 207
+        y: 81
+        width: 23
+        height: 51
       alignment: 9
-      pivot: {x: 0.9134366, y: 0.07002609}
+      pivot: {x: 0.19666258, y: 0.0896035}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -403,12 +403,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_11
       rect:
         serializedVersion: 2
-        x: 40
-        y: 58
-        width: 32
-        height: 10
+        x: 124
+        y: 81
+        width: 61
+        height: 22
       alignment: 9
-      pivot: {x: 0.95219636, y: 0.25193864}
+      pivot: {x: 0.97019935, y: 0.7818888}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -424,12 +424,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_12
       rect:
         serializedVersion: 2
-        x: 76
-        y: 60
-        width: 32
-        height: 11
+        x: 14
+        y: 0
+        width: 8
+        height: 54
       alignment: 9
-      pivot: {x: 0.96511626, y: 0.80068207}
+      pivot: {x: 0.40310073, y: 0.069336794}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -445,12 +445,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_13
       rect:
         serializedVersion: 2
-        x: 3
-        y: 31
-        width: 31
-        height: 10
+        x: 37
+        y: 39
+        width: 55
+        height: 38
       alignment: 9
-      pivot: {x: 0.9534467, y: 0.7894066}
+      pivot: {x: 0.04897801, y: 0.13280337}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -466,12 +466,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_14
       rect:
         serializedVersion: 2
-        x: 44
-        y: 24
-        width: 29
+        x: 110
+        y: 46
+        width: 60
         height: 20
       alignment: 9
-      pivot: {x: 0.9989753, y: 0.89276487}
+      pivot: {x: 0.88759667, y: 0.22868213}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -487,12 +487,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_15
       rect:
         serializedVersion: 2
-        x: 73
-        y: 30
-        width: 31
-        height: 9
+        x: 185
+        y: 7
+        width: 52
+        height: 42
       alignment: 9
-      pivot: {x: 0.98012, y: 0.08656374}
+      pivot: {x: 0.8875964, y: 0.11240326}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -508,12 +508,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_16
       rect:
         serializedVersion: 2
-        x: 98
-        y: 28
-        width: 27
-        height: 22
+        x: 42
+        y: 7
+        width: 59
+        height: 19
       alignment: 9
-      pivot: {x: 0.9440616, y: 0.105355866}
+      pivot: {x: 0.8810272, y: 0.8263981}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -529,12 +529,12 @@ TextureImporter:
       name: Tiger_Tail_Sheet_17
       rect:
         serializedVersion: 2
-        x: 13
-        y: 1
-        width: 4
-        height: 28
+        x: 114
+        y: 10
+        width: 59
+        height: 18
       alignment: 9
-      pivot: {x: 0.39664078, y: 0.10132913}
+      pivot: {x: 0.89416605, y: 0.11240414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
