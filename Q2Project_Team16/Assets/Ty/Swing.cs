@@ -103,10 +103,13 @@ public class Swing : MonoBehaviour
     {
         if (col.gameObject.tag == "Rope")
         {
+            Debug.Log("1");
             if (attachedTo != col.gameObject.transform.parent)
             {
+                Debug.Log("2");
                 if (disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                 {
+                    Debug.Log("3");
                     Attach(col.gameObject.GetComponent<Movement>().rb);
                 }
             }
