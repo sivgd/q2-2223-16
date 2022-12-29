@@ -12,29 +12,32 @@ public class Swing : MonoBehaviour
     public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
-    public Collider2D col;
-
-
+    public BoxCollider2D col;
+    public GameObject Player;
     
+
+
+
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
+        col = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         CheckKeyboardInputs();
     }
 
-    
-    
+
+
 
     void CheckKeyboardInputs()
     {
-            if (Input.GetKey("a") || Input.GetKey("left"))
-        { 
+        if (Input.GetKey("a") || Input.GetKey("left"))
+        {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(-1, 0, 0) * pushForce);
@@ -56,7 +59,7 @@ public class Swing : MonoBehaviour
             Slide(-1);
         }
         if (Input.GetButtonDown("Jump") && attached)
-        { 
+        {
             Detach();
         }
 
@@ -90,9 +93,9 @@ public class Swing : MonoBehaviour
             }
         }
 
-       
-        
-        
+
+
+
 
 
 
@@ -110,28 +113,32 @@ public class Swing : MonoBehaviour
                 if (disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                 {
                     Debug.Log("3");
-                    Attach(col.gameObject.GetComponent<Movement>().rb);
+                    Attach(col.gameObject.GetComponent<Rigidbody2D>());
                 }
             }
         }
-
     }
+
+
+
+
+
 
     void Attach(Rigidbody2D ropeBone)
     {
-        ropeBone.gameObject.GetComponent<RopeSegment>().isPlayerAttached = true;
-        hj.connectedBody = ropeBone;
-        hj.enabled = true;
-        attached = true;
-        attachedTo = ropeBone.gameObject.transform.parent;
+    ropeBone.gameObject.GetComponent<RopeSegment>().isPlayerAttached = true;
+    hj.connectedBody = ropeBone;
+    hj.enabled = true;
+    attached = true;
+    attachedTo = ropeBone.gameObject.transform.parent;
     }
 
 
     void Detach()
     {
-        hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
-        attached = false;
-        hj.enabled = false;
-        hj.connectedBody = null;
+    hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
+    attached = false;
+    hj.enabled = false;
+    hj.connectedBody = null;
     }
 }

@@ -9,11 +9,13 @@ public class Movement : MonoBehaviour
     public float jumpForce;
     public SpriteRenderer sr;
     public Rigidbody2D rb;
+    public Collider2D col;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            if(jumpForce > 11)
+            if (jumpForce > 11)
             {
                 jumpForce = 11;
             }
