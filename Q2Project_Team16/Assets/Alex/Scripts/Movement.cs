@@ -41,4 +41,6 @@ public class Movement : MonoBehaviour
         }
     }
 
+    //set up an on trigger void to enable jumping while on a wall
+
 }
