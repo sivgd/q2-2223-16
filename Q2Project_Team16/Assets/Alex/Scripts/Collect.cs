@@ -21,12 +21,17 @@ public class Collect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && obj.GetComponent<Renderer>().enabled == true)
         {
-            obj.SetActive(false);
+            obj.GetComponent<Renderer>().enabled = false;
             player.GetComponent<Movement>().jumpForce = 16;
+            StartCoroutine(Delay());
         }
     }
-
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(3);
+        obj.GetComponent<Renderer>().enabled = true;
+    }
 
 }

@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     public SpriteRenderer sr;
     public Rigidbody2D rb;
     public Collider2D col;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,15 @@ public class Movement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             sr.flipX = true;
+        }
+
+        if (moveInput == 0)
+        {
+            //animator.SetBool("Moving", false);
+        }
+        else
+        {
+            //animator.SetBool("Moving", true);
         }
     }
 
