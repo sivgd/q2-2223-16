@@ -50,55 +50,10 @@ public class Swing : MonoBehaviour
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if ((Input.GetKeyDown("w") || Input.GetKeyDown("up")) && attached)
-        {
-            Slide(1);
-        }
-        if ((Input.GetKeyDown("s") || Input.GetKeyDown("down")) && attached)
-        {
-            Slide(-1);
-        }
         if (Input.GetButtonDown("Jump") && attached)
         {
             Detach();
         }
-
-        void Slide(int direction)
-        {
-            RopeSegment myConnection = hj.connectedBody.gameObject.GetComponent<RopeSegment>();
-            GameObject newSeg = null;
-            if (direction > 0)
-            {
-                if (myConnection.connectedAbove != null)
-                {
-                    if (myConnection.connectedAbove.gameObject.GetComponent<RopeSegment>() != null)
-                    {
-                        newSeg = myConnection.connectedAbove;
-                    }
-                }
-            }
-            else
-            {
-                if (myConnection.connectedBelow != null)
-                {
-                    newSeg = myConnection.connectedBelow;
-                }
-            }
-            if (newSeg != null)
-            {
-                transform.position = newSeg.transform.position;
-                myConnection.isPlayerAttached = false;
-                newSeg.GetComponent<RopeSegment>().isPlayerAttached = true;
-                hj.connectedBody = newSeg.GetComponent<Rigidbody2D>();
-            }
-        }
-
-
-
-
-
-
-
     }
 
 
