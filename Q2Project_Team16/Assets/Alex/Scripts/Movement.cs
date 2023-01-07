@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,16 @@ public class Movement : MonoBehaviour
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(moveInput, 0, 0) * moveSpeed * Time.deltaTime;
+
+        if (moveInput == 0)
+        {
+            animator.SetBool("Moving", false);
+        }
+        else
+        {
+            animator.SetBool("Moving", true);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -39,15 +50,6 @@ public class Movement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             sr.flipX = true;
-        }
-
-        if (moveInput == 0)
-        {
-            //animator.SetBool("Moving", false);
-        }
-        else
-        {
-            //animator.SetBool("Moving", true);
         }
     }
 
