@@ -8,13 +8,18 @@ public class MainMenu : MonoBehaviour
     public void PlayGame ()
     {
         Debug.Log("Start");
-   // SceneManager.LoadScene(SceneManager.GetActiveScene().BuildIndex +1);
+        SceneManager.LoadScene("TestPause");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit");
-        Application.Quit();
+        //Application.Quit();
+    }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("CreditsScene");
     }
 
 

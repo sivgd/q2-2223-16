@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Alex/AlexScene.unity
     guid: 7907e3b849c2b5945a391fe864e925e9
+  - enabled: 0
+    path: Assets/Olivia/Scenes/TestMenu.unity
+    guid: 53a2e4d5a1bd8d247a305d0f54d516cb
+  - enabled: 0
+    path: Assets/Olivia/Scenes/TestPause.unity
+    guid: cf8bdf94d0530264e96d00282eb41ba0
   m_configObjects: {}
