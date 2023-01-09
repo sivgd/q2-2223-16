@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4788488091655589851}
-    m_Position: {x: 350, y: 0, z: 0}
+    m_Position: {x: 270, y: 90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -45,7 +45,7 @@ AnimatorState:
   m_Motion: {fileID: 7400000, guid: 15c10a91444c89944a7dcee3f9e02257, type: 2}
   m_Tag: 
   m_SpeedParameter: 
-  m_MirrorParameter: 
+  m_MirrorParameter: PlayPaw
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 --- !u!91 &9100000
@@ -57,7 +57,7 @@ AnimatorController:
   m_Name: Tiger_Paw_Sheet_0
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Play
+  - m_Name: PlayPaw
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
