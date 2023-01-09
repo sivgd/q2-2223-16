@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetFloat("yVelocity", rb.velocity.y);
         float moveInput = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(moveInput, 0, 0) * moveSpeed * Time.deltaTime;
 
@@ -35,14 +36,24 @@ public class Movement : MonoBehaviour
             animator.SetBool("Moving", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
+        if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            if (jumpForce > 11)
+            animator.SetBool("Grounded", true);
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                jumpForce = 11;
+                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                if (jumpForce > 11)
+                {
+                    jumpForce = 11;
+                }
             }
+            
         }
+        else
+        {
+            animator.SetBool("Grounded", false);
+        }
+
         if (Input.GetAxis("Horizontal") > 0)
         {
             sr.flipX = false;
