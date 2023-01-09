@@ -7,11 +7,12 @@ public class PlayPaw : MonoBehaviour
     public GameObject mainplayer;
     private Rigidbody2D rb2;
     public GameObject Bush;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
