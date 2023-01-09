@@ -84,6 +84,8 @@ public class Swing : MonoBehaviour
     ropeBone.gameObject.GetComponent<RopeSegment>().isPlayerAttached = true;
     hj.connectedBody = ropeBone;
     hj.enabled = true;
+    col.enabled = false;
+    Player.GetComponent<Movement>().enabled = false;
     attached = true;
     attachedTo = ropeBone.gameObject.transform.parent;
     }
@@ -94,6 +96,8 @@ public class Swing : MonoBehaviour
     hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
     attached = false;
     hj.enabled = false;
+    Player.GetComponent<Movement>().enabled = true;
     hj.connectedBody = null;
+    col.enabled = true;
     }
 }
