@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public Collider2D col;
     Animator animator;
+    public ParticleSystem jumpReady;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class Movement : MonoBehaviour
                 if (jumpForce > 11)
                 {
                     jumpForce = 11;
+                    jumpReady.Stop();
                 }
             }
             
