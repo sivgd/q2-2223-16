@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1263519990}
   - component: {fileID: 1263519989}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Item_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4922,6 +4922,7 @@ MonoBehaviour:
   obj: {fileID: 5746174998913595354}
   player: {fileID: 0}
   ps: {fileID: 1263519990}
+  jumpReady: {fileID: 0}
 --- !u!114 &5746174998913595359
 MonoBehaviour:
   m_ObjectHideFlags: 0
