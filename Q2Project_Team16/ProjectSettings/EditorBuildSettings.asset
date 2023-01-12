@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Olivia/Scenes/TestPause.unity
     guid: cf8bdf94d0530264e96d00282eb41ba0
   - enabled: 0
-    path: Assets/Celeste/Celeste-Scene.unity
+    path: Assets/Celeste/Tutorial.unity
     guid: d6b9e345f8f969343a8a71d0814ea004
   - enabled: 0
     path: Assets/Olivia/Scenes/1Credit.unity
