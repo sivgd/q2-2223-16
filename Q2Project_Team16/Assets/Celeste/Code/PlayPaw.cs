@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class PlayPaw : MonoBehaviour
 {
-    public GameObject mainplayer;
-    private Rigidbody2D rb2;
-    public GameObject Bush;
-    Animator anim;
+    public GameObject obj;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = gameObject.GetComponent<Animator>();
+        obj.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
+   private void OnTriggerEnter2D(Collider2D collision)
+   {
+        if(collision.tag == "Player")
+        {
+            obj.SetActive(true);
+        } else {
+            obj.SetActive(false);
+        }
+   }
+  
 }
