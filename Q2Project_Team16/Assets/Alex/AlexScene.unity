@@ -1005,6 +1005,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1362287482788694937, guid: e09a025b56953634f870eb5a0edce890, type: 3}
   m_PrefabInstance: {fileID: 9161943953193464034}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1534495275 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1362287482788694915, guid: e09a025b56953634f870eb5a0edce890, type: 3}
+  m_PrefabInstance: {fileID: 9161943953193464034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1534495278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1362287482788694941, guid: e09a025b56953634f870eb5a0edce890, type: 3}
@@ -1186,7 +1191,7 @@ PrefabInstance:
     - target: {fileID: 1475549459619901743, guid: 0ac3cb72778c1174e9be1da7758c3f18, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1534495274}
+      objectReference: {fileID: 1534495275}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ac3cb72778c1174e9be1da7758c3f18, type: 3}
 --- !u!1001 &1556285671727863069
@@ -1197,13 +1202,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1556285672760363643, guid: c7ba1575c47dbb34fbf7b840aa137057, type: 3}
-      propertyPath: obj
-      value: 
-      objectReference: {fileID: 1534495274}
-    - target: {fileID: 1556285672760363643, guid: c7ba1575c47dbb34fbf7b840aa137057, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 1823622392}
+    - target: {fileID: 1556285672760363643, guid: c7ba1575c47dbb34fbf7b840aa137057, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1534495275}
     - target: {fileID: 1556285672760363645, guid: c7ba1575c47dbb34fbf7b840aa137057, type: 3}
       propertyPath: m_Name
       value: Crocodile

@@ -12,8 +12,9 @@ public class Swing : MonoBehaviour
     public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
-    public BoxCollider2D col;
+    public BoxCollider2D bigCol, smallCol;
     public GameObject Player;
+ 
     
 
 
@@ -22,7 +23,8 @@ public class Swing : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
-        col = GetComponent<BoxCollider2D>();
+        bigCol = GetComponent<BoxCollider2D>();
+        smallCol = GetComponent<BoxCollider2D>();
     }
 
     //Update is called once per frame
@@ -57,18 +59,18 @@ public class Swing : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D bigCol)
     {
-        if (col.gameObject.tag == "Rope")
+        if (bigCol.gameObject.tag == "Rope")
         {
             Debug.Log("1");
-            if (attachedTo != col.gameObject.transform.parent)
+            if (attachedTo != bigCol.gameObject.transform.parent)
             {
                 Debug.Log("2");
-                if (disregard == null || col.gameObject.transform.parent.gameObject != disregard)
+                if (disregard == null || bigCol.gameObject.transform.parent.gameObject != disregard)
                 {
                     Debug.Log("3");
-                    Attach(col.gameObject.GetComponent<Rigidbody2D>());
+                    Attach(bigCol.gameObject.GetComponent<Rigidbody2D>());
                 }
             }
         }
@@ -81,10 +83,10 @@ public class Swing : MonoBehaviour
 
     void Attach(Rigidbody2D ropeBone)
     {
-    ropeBone.gameObject.GetComponent<RopeSegment>().isPlayerAttached = true;
     hj.connectedBody = ropeBone;
     hj.enabled = true;
-    col.enabled = false;
+    smallCol.enabled = true;
+    bigCol.enabled = false;
     Player.GetComponent<Movement>().enabled = false;
     attached = true;
     attachedTo = ropeBone.gameObject.transform.parent;
@@ -93,11 +95,11 @@ public class Swing : MonoBehaviour
 
     void Detach()
     {
-    hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
     attached = false;
     hj.enabled = false;
     Player.GetComponent<Movement>().enabled = true;
     hj.connectedBody = null;
-    col.enabled = true;
+    smallCol.enabled = false;
+    bigCol.enabled = true;
     }
 }

@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public Collider2D col;
     Animator animator;
     public ParticleSystem jumpReady;
+    public bool isAlive;
 
     // Start is called before the first frame update
     void Start()
@@ -19,14 +20,19 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
         animator = gameObject.GetComponent<Animator>();
+        isAlive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         animator.SetFloat("yVelocity", rb.velocity.y);
         float moveInput = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(moveInput, 0, 0) * moveSpeed * Time.deltaTime;
+        if(isAlive == true)
+        {
+            transform.position += new Vector3(moveInput, 0, 0) * moveSpeed * Time.deltaTime;
+        }
 
         if (moveInput == 0)
         {
@@ -40,7 +46,7 @@ public class Movement : MonoBehaviour
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             animator.SetBool("Grounded", true);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && isAlive == true)
             {
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 if (jumpForce > 11)
@@ -63,6 +69,11 @@ public class Movement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             sr.flipX = true;
+        }
+
+        if (animator.GetBool("Dead"))
+        {
+            isAlive = false;
         }
     }
 
