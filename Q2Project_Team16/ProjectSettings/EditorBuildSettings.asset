@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Alex/AlexScene.unity
     guid: 7907e3b849c2b5945a391fe864e925e9
   - enabled: 0
@@ -17,13 +17,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Olivia/Scenes/TestPause.unity
     guid: cf8bdf94d0530264e96d00282eb41ba0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Celeste/Tutorial.unity
     guid: d6b9e345f8f969343a8a71d0814ea004
-  - enabled: 0
+  - enabled: 1
     path: Assets/Olivia/Scenes/1Credit.unity
     guid: 31f8133b18f1477459ef324f27ff0d95
-  - enabled: 0
+  - enabled: 1
     path: Assets/Olivia/Scenes/2Credit.unity
     guid: a96866f195ad4264994088baeba239b3
   m_configObjects: {}
