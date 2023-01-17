@@ -4956,6 +4956,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   col: {fileID: 0}
   jumpReady: {fileID: 1134958127}
+  isAlive: 0
 --- !u!95 &1362287482788694915
 Animator:
   serializedVersion: 3
