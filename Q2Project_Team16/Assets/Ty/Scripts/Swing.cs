@@ -59,18 +59,19 @@ public class Swing : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D bigCol)
+    void OnTriggerEnter2D(Collider2D smallCol)
     {
-        if (bigCol.gameObject.tag == "Rope")
+        if (smallCol.gameObject.tag == "Rope")
         {
             Debug.Log("1");
-            if (attachedTo != bigCol.gameObject.transform.parent)
+            bigCol.enabled = false;
+            if (attachedTo != smallCol.gameObject.transform.parent)
             {
                 Debug.Log("2");
-                if (disregard == null || bigCol.gameObject.transform.parent.gameObject != disregard)
+                if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
                 {
                     Debug.Log("3");
-                    Attach(bigCol.gameObject.GetComponent<Rigidbody2D>());
+                    Attach(smallCol.gameObject.GetComponent<Rigidbody2D>());
                 }
             }
         }
@@ -85,8 +86,6 @@ public class Swing : MonoBehaviour
     {
     hj.connectedBody = ropeBone;
     hj.enabled = true;
-    smallCol.enabled = true;
-    bigCol.enabled = false;
     Player.GetComponent<Movement>().enabled = false;
     attached = true;
     attachedTo = ropeBone.gameObject.transform.parent;
@@ -98,8 +97,8 @@ public class Swing : MonoBehaviour
     attached = false;
     hj.enabled = false;
     Player.GetComponent<Movement>().enabled = true;
-    hj.connectedBody = null;
-    smallCol.enabled = false;
+    //hj.connectedBody = null;
     bigCol.enabled = true;
+    
     }
 }

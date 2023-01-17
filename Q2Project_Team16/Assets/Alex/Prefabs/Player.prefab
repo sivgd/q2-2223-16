@@ -9621,8 +9621,8 @@ GameObject:
   - component: {fileID: 1362287482788694936}
   - component: {fileID: 1362287482788694940}
   - component: {fileID: 1362287482788694915}
-  - component: {fileID: 97592943}
   - component: {fileID: 97592950}
+  - component: {fileID: 97592943}
   - component: {fileID: 653095961999068031}
   - component: {fileID: 97592942}
   - component: {fileID: 97592941}
@@ -9760,7 +9760,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &97592943
+--- !u!61 &97592950
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9770,7 +9770,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -9786,7 +9786,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
---- !u!61 &97592950
+--- !u!61 &97592943
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9796,7 +9796,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
