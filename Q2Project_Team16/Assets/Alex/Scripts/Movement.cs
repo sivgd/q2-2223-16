@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public Collider2D col;
     Animator animator;
     public ParticleSystem jumpReady;
+    public ParticleSystem dust;
     public bool isAlive;
 
     // Start is called before the first frame update
@@ -48,6 +49,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("Grounded", true);
             if (Input.GetKeyDown(KeyCode.Space) && isAlive == true)
             {
+                CreateDust();
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 if (jumpForce > 11)
                 {
@@ -77,4 +79,8 @@ public class Movement : MonoBehaviour
         }
     }
 
+    void CreateDust()
+    {
+        dust.Play();
+    }
 }
