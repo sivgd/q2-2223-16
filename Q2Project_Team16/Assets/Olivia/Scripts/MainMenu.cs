@@ -8,13 +8,13 @@ public class MainMenu : MonoBehaviour
     public void PlayGame ()
     {
         Debug.Log("Start");
-        SceneManager.LoadScene("TestPause");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit");
-        //Application.Quit();
+        Application.Quit();
     }
 
     public void LoadCredits()
