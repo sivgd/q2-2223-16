@@ -14,6 +14,7 @@ public class Swing : MonoBehaviour
     private GameObject disregard;
     public BoxCollider2D bigCol, smallCol;
     public GameObject Player;
+    public Animator animator;
  
     
 
@@ -77,7 +78,13 @@ public class Swing : MonoBehaviour
         }
     }
 
-
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Rope")
+        {
+            Detach();
+        }
+    }
 
 
 
@@ -99,6 +106,5 @@ public class Swing : MonoBehaviour
     Player.GetComponent<Movement>().enabled = true;
     //hj.connectedBody = null;
     bigCol.enabled = true;
-    
     }
 }

@@ -83,4 +83,18 @@ public class Movement : MonoBehaviour
     {
         dust.Play();
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Rope")
+        {
+            animator.SetBool("Grabbing", true);
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Rope")
+        {
+            animator.SetBool("Grabbing", false);
+        }
+    }
 }
