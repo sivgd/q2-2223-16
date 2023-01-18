@@ -65,10 +65,10 @@ public class Swing : MonoBehaviour
         if (smallCol.gameObject.tag == "Rope")
         {
             Debug.Log("1");
-            bigCol.enabled = false;
             if (attachedTo != smallCol.gameObject.transform.parent)
             {
                 Debug.Log("2");
+                bigCol.enabled = false;
                 if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
                 {
                     Debug.Log("3");
@@ -78,13 +78,13 @@ public class Swing : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Rope")
-        {
-            Detach();
-        }
-    }
+    //void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Rope")
+    //    {
+    //        Detach();
+    //    }
+    //}
 
 
 
@@ -104,7 +104,7 @@ public class Swing : MonoBehaviour
     attached = false;
     hj.enabled = false;
     Player.GetComponent<Movement>().enabled = true;
-    //hj.connectedBody = null;
+    hj.connectedBody = null;
     bigCol.enabled = true;
     }
 }
