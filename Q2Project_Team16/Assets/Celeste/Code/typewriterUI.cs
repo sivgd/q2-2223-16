@@ -35,6 +35,7 @@ public class typewriterUI : MonoBehaviour
 
             StartCoroutine("TypeWriterTMP");
         }
+
     }
 
     IEnumerator TypeWriterText()
@@ -82,4 +83,5 @@ public class typewriterUI : MonoBehaviour
             _tmpProText.text = _tmpProText.text.Substring(0, _tmpProText.text.Length - leadingChar.Length);
         }
     }
+
 }
