@@ -8,7 +8,7 @@ public class CheckPoint : MonoBehaviour
     public static Vector2 lastpos;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         GameObject.FindGameObjectWithTag("Player").transform.position = lastpos;
     }
