@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Olivia/Scenes/2Credit.unity
     guid: a96866f195ad4264994088baeba239b3
+  - enabled: 1
+    path: Assets/Olivia/Scenes/3Credit.unity
+    guid: 43149fc1416649240bafc3fa4553e91b
+  - enabled: 1
+    path: Assets/Olivia/Scenes/4Credit.unity
+    guid: c505c4bf8904b124897e1348f2f02972
+  - enabled: 1
+    path: Assets/Olivia/Scenes/5Credit.unity
+    guid: d1d80717484e3cd4faa2a021b1313fa0
+  - enabled: 1
+    path: Assets/Olivia/Scenes/6Credit.unity
+    guid: 231a06981228a1346a88dd8dcee6afc9
+  - enabled: 1
+    path: Assets/Olivia/Scenes/7Credit.unity
+    guid: 5b11e08788e2c834da31a99581e35b25
   m_configObjects: {}
