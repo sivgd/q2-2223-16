@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TriggerText : MonoBehaviour
 {
     public GameObject obj;
+    public GameObject Empty;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,7 @@ public class TriggerText : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
@@ -26,5 +28,9 @@ public class TriggerText : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision) => obj.SetActive(false);
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        obj.SetActive(false);
+        Destroy(Empty);
+    }
 }
