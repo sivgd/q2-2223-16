@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Olivia/Scenes/7Credit.unity
     guid: 5b11e08788e2c834da31a99581e35b25
+  - enabled: 1
+    path: Assets/Olivia/Scenes/8Credit.unity
+    guid: fb7ce636f11cc8c458b91c9699a4b5ec
   m_configObjects: {}
