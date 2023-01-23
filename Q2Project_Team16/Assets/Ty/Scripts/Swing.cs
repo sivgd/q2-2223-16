@@ -78,14 +78,13 @@ public class Swing : MonoBehaviour
         }
     }
 
-    //void OnTriggerExit2D(Collider2D collision)
+    //void OnTriggerEnter2D(Collider2D Grounded)
     //{
-    //    if (collision.tag == "Rope")
+    //    if (bigCol.gameObject.tag == "Ground")
     //    {
-    //        Detach();
+    //        Debug.Log("Ground");
     //    }
     //}
-
 
 
 
@@ -95,7 +94,7 @@ public class Swing : MonoBehaviour
     hj.enabled = true;
     Player.GetComponent<Movement>().enabled = false;
     attached = true;
-    attachedTo = ropeBone.gameObject.transform.parent;
+    //attachedTo = ropeBone.gameObject.transform.parent;
     }
 
 
@@ -104,7 +103,7 @@ public class Swing : MonoBehaviour
     attached = false;
     hj.enabled = false;
     Player.GetComponent<Movement>().enabled = true;
-    hj.connectedBody = null;
+    //hj.connectedBody = null;
     bigCol.enabled = true;
     }
 }
