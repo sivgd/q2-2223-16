@@ -9733,7 +9733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40ad3f5418cff143a017ebf32cd8e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
   jumpForce: 11
   sr: {fileID: 1362287482788694942}
   rb: {fileID: 0}
