@@ -15,8 +15,9 @@ public class Swing : MonoBehaviour
     public BoxCollider2D bigCol, smallCol;
     public GameObject Player;
     public Animator animator;
- 
-    
+    public bool isOKtoAttach;
+
+
 
 
 
@@ -26,7 +27,14 @@ public class Swing : MonoBehaviour
         hj = gameObject.GetComponent<HingeJoint2D>();
         bigCol = GetComponent<BoxCollider2D>();
         smallCol = GetComponent<BoxCollider2D>();
-        animator = gameObject.GetComponent<Animator>();
+        isOKtoAttach = false;
+
+    }
+
+    private void Start()
+    {
+        //Invoke("TurnAttachTrue", 0.5f);
+        InvokeRepeating("TurnAttachTrue", 0f, 0.5f);
     }
 
     //Update is called once per frame
@@ -44,9 +52,6 @@ public class Swing : MonoBehaviour
             animator.SetBool("Grabbing", false);
         }
     }
-
-
-
 
     void CheckKeyboardInputs()
     {
@@ -89,32 +94,33 @@ public class Swing : MonoBehaviour
         }
     }
 
-    //void OnTriggerEnter2D(Collider2D Grounded)
-    //{
-    //    if (bigCol.gameObject.tag == "Ground")
-    //    {
-    //        Debug.Log("Ground");
-    //    }
-    //}
 
 
 
     void Attach(Rigidbody2D ropeBone)
     {
-    hj.connectedBody = ropeBone;
-    hj.enabled = true;
-    Player.GetComponent<Movement>().enabled = false;
-    attached = true;
-    //attachedTo = ropeBone.gameObject.transform.parent;
+        if (isOKtoAttach)
+        {
+            hj.connectedBody = ropeBone;
+            hj.enabled = true;
+            Player.GetComponent<Movement>().enabled = false;
+            attached = true;
+        }
     }
 
 
     void Detach()
     {
-    attached = false;
-    hj.enabled = false;
-    Player.GetComponent<Movement>().enabled = true;
-    //hj.connectedBody = null;
-    bigCol.enabled = true;
+        attached = false;
+        hj.enabled = false;
+        Player.GetComponent<Movement>().enabled = true;
+        bigCol.enabled = true;
+        isOKtoAttach = false;
+    }
+
+
+    void TurnAttachTrue()
+    {
+        isOKtoAttach = true;
     }
 }
