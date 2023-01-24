@@ -26,12 +26,23 @@ public class Swing : MonoBehaviour
         hj = gameObject.GetComponent<HingeJoint2D>();
         bigCol = GetComponent<BoxCollider2D>();
         smallCol = GetComponent<BoxCollider2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     //Update is called once per frame
     void Update()
     {
         CheckKeyboardInputs();
+
+        if (attached == true)
+        {
+            animator.SetBool("Grabbing", true);
+            animator.SetBool("Grounded", true);
+        }
+        else
+        {
+            animator.SetBool("Grabbing", false);
+        }
     }
 
 

@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8110550797618849571}
   - component: {fileID: 8110550797618849570}
   m_Layer: 0
-  m_Name: Paralaxing_Background6
+  m_Name: Layer-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37662ed091ce33c4cae527521fe09c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: -0.05
+  parallaxFactor: -0.025
 --- !u!1 &8110550798784947881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37662ed091ce33c4cae527521fe09c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: -0.2
+  parallaxFactor: -0.1
 --- !u!1 &8989996182409191216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,7 +2278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37662ed091ce33c4cae527521fe09c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: -0.15
+  parallaxFactor: -0.075
 --- !u!1 &8989996183091026919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37662ed091ce33c4cae527521fe09c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: -0.15
+  parallaxFactor: -0.075
 --- !u!1 &8989996183167173043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37662ed091ce33c4cae527521fe09c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxFactor: -0.1
+  parallaxFactor: -0.05
 --- !u!1 &8989996183841755569
 GameObject:
   m_ObjectHideFlags: 0
