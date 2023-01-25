@@ -35,6 +35,7 @@ public class Swing : MonoBehaviour
     {
         //Invoke("TurnAttachTrue", 0.5f);
         InvokeRepeating("TurnAttachTrue", 0f, 0.5f);
+        rb.freezeRotation = true;
     }
 
     //Update is called once per frame
@@ -84,6 +85,7 @@ public class Swing : MonoBehaviour
             if (attachedTo != smallCol.gameObject.transform.parent)
             {
                 Debug.Log("2");
+                //rb.freezeRotation = false;
                 bigCol.enabled = false;
                 if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
                 {
@@ -116,6 +118,7 @@ public class Swing : MonoBehaviour
         Player.GetComponent<Movement>().enabled = true;
         bigCol.enabled = true;
         isOKtoAttach = false;
+        //rb.freezeRotation = true;
     }
 
 
