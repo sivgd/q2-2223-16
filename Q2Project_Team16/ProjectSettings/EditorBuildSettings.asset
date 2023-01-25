@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Celeste/Tutorial.unity
     guid: d6b9e345f8f969343a8a71d0814ea004
   - enabled: 1
+    path: Assets/Ty/VineSwing.unity
+    guid: a6abd530b3567774eb7d4cdb776940ca
+  - enabled: 1
     path: Assets/Olivia/Scenes/1Credit.unity
     guid: 31f8133b18f1477459ef324f27ff0d95
   - enabled: 1
