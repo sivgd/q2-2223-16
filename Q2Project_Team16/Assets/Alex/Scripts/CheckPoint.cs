@@ -8,6 +8,7 @@ public class CheckPoint : MonoBehaviour
     public static Vector2 lastpos;
     public ParticleSystem activate;
     public ParticleSystem saved;
+    public bool isSaved = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,12 @@ public class CheckPoint : MonoBehaviour
         if(collision.transform.tag == "Player")
         {
             lastpos = transform.position;
-            activate.Play();
-            StartCoroutine(Delay());
+            if (isSaved == false)
+            {
+                activate.Play();
+                StartCoroutine(Delay());
+                isSaved = true;
+            }
 
         }
     }

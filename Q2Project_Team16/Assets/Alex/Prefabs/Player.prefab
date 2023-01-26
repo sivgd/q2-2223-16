@@ -9688,7 +9688,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fd999d7d39318694688fb97390ff4f1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9882,3 +9882,4 @@ MonoBehaviour:
   smallCol: {fileID: 653095961999068031}
   Player: {fileID: 1362287482788694937}
   animator: {fileID: 1362287482788694915}
+  isOKtoAttach: 0
