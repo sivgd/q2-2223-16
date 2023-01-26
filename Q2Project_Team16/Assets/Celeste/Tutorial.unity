@@ -6067,6 +6067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crocodile
       objectReference: {fileID: 0}
+    - target: {fileID: 1556285672760363646, guid: c7ba1575c47dbb34fbf7b840aa137057, type: 3}
+      propertyPath: distance
+      value: 1.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1556285672760363647, guid: c7ba1575c47dbb34fbf7b840aa137057, type: 3}
       propertyPath: m_RootOrder
       value: 4

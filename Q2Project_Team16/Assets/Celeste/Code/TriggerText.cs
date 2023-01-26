@@ -12,6 +12,7 @@ public class TriggerText : MonoBehaviour
     void Start()
     {
         obj.SetActive(false);
+        empty.SetActive(true);
     }
 
     // Update is called once per frame
