@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TriggerText : MonoBehaviour
 {
     public GameObject obj;
+    public GameObject empty;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,11 @@ public class TriggerText : MonoBehaviour
         {
             obj.SetActive(true);
         }
+    }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        empty.SetActive(false);
     }
 
 }
