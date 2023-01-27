@@ -12,7 +12,7 @@ public class Swing : MonoBehaviour
     public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
-    public BoxCollider2D bigCol, smallCol;
+    public BoxCollider2D bigCol, smallCol, triggerCol;
     public GameObject Player;
     public Animator animator;
     public bool isOKtoAttach;
@@ -27,14 +27,15 @@ public class Swing : MonoBehaviour
         hj = gameObject.GetComponent<HingeJoint2D>();
         bigCol = GetComponent<BoxCollider2D>();
         smallCol = GetComponent<BoxCollider2D>();
-        isOKtoAttach = false;
+        isOKtoAttach = true;
 
     }
 
     private void Start()
     {
         //Invoke("TurnAttachTrue", 0.5f);
-        InvokeRepeating("TurnAttachTrue", 0f, 0.5f);
+        //InvokeRepeating("TurnAttachTrue", 0f, 2f);
+        //InvokeAfter("TurnAttachTrue")
         rb.freezeRotation = true;
     }
 
@@ -79,18 +80,21 @@ public class Swing : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D smallCol)
     {
-        if (smallCol.gameObject.tag == "Rope")
+        if (isOKtoAttach == true)
         {
-            Debug.Log("1");
-            if (attachedTo != smallCol.gameObject.transform.parent)
+            if (smallCol.gameObject.tag == "Rope")
             {
-                Debug.Log("2");
-                //rb.freezeRotation = false;
-                bigCol.enabled = false;
-                if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
+                Debug.Log("1");
+                if (attachedTo != smallCol.gameObject.transform.parent)
                 {
-                    Debug.Log("3");
-                    Attach(smallCol.gameObject.GetComponent<Rigidbody2D>());
+                    Debug.Log("2");
+                    //rb.freezeRotation = false;
+                    bigCol.enabled = false;
+                    if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
+                    {
+                        Debug.Log("3");
+                        Attach(smallCol.gameObject.GetComponent<Rigidbody2D>());
+                    }
                 }
             }
         }
@@ -101,12 +105,13 @@ public class Swing : MonoBehaviour
 
     void Attach(Rigidbody2D ropeBone)
     {
-        if (isOKtoAttach)
         {
             hj.connectedBody = ropeBone;
             hj.enabled = true;
+            bigCol.enabled = false;
             Player.GetComponent<Movement>().enabled = false;
             attached = true;
+            triggerCol.enabled = false;
         }
     }
 
@@ -118,6 +123,8 @@ public class Swing : MonoBehaviour
         Player.GetComponent<Movement>().enabled = true;
         bigCol.enabled = true;
         isOKtoAttach = false;
+        triggerCol.enabled = true;
+        Invoke("TurnAttachTrue", 2.5f);
         //rb.freezeRotation = true;
     }
 
