@@ -14,6 +14,10 @@ public class Movement : MonoBehaviour
     public ParticleSystem jumpReady;
     public ParticleSystem dust;
     public bool isAlive;
+    public Swing sw;
+    public AudioSource source;
+    public AudioClip boing;
+    public AudioClip bubbles;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +51,11 @@ public class Movement : MonoBehaviour
         if (Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             animator.SetBool("Grounded", true);
+            sw.isOKtoAttach = true;
             if (Input.GetKeyDown(KeyCode.Space) && isAlive == true)
             {
                 CreateDust();
+                source.PlayOneShot(boing);
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 if (jumpForce > 11)
                 {
@@ -82,5 +88,13 @@ public class Movement : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "JumpItem" && jumpForce == 11)
+        {
+            //source.PlayOneShot(bubbles);
+        }
     }
 }

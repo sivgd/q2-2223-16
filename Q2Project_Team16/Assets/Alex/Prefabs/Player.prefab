@@ -9741,6 +9741,7 @@ MonoBehaviour:
   jumpReady: {fileID: 1134958127}
   dust: {fileID: 56848597}
   isAlive: 0
+  sw: {fileID: 97592941}
 --- !u!95 &1362287482788694915
 Animator:
   serializedVersion: 3
