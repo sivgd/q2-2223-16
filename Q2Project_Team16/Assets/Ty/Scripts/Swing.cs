@@ -33,8 +33,7 @@ public class Swing : MonoBehaviour
 
     private void Start()
     {
-        //Invoke("TurnAttachTrue", 0.5f);
-        InvokeRepeating("TurnAttachTrue", 0f, 0.5f);
+        Invoke("TurnAttachTrue", 0.5f);
         rb.freezeRotation = true;
     }
 
@@ -82,18 +81,20 @@ public class Swing : MonoBehaviour
         if (smallCol.gameObject.tag == "Rope")
         {
             Debug.Log("1");
-            if (attachedTo != smallCol.gameObject.transform.parent)
+            if (isOKtoAttach)
             {
-                Debug.Log("2");
-                //rb.freezeRotation = false;
-                bigCol.enabled = false;
-                if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
+                if (attachedTo != smallCol.gameObject.transform.parent)
                 {
-                    Debug.Log("3");
-                    Attach(smallCol.gameObject.GetComponent<Rigidbody2D>());
+                    Debug.Log("2");
+                    //rb.freezeRotation = false;
+                    if (disregard == null || smallCol.gameObject.transform.parent.gameObject != disregard)
+                    {
+                        Debug.Log("3");
+                        Attach(smallCol.gameObject.GetComponent<Rigidbody2D>());
+                    }
                 }
             }
-        }
+        }       
     }
 
 
@@ -103,6 +104,7 @@ public class Swing : MonoBehaviour
     {
         if (isOKtoAttach)
         {
+            bigCol.enabled = false;
             hj.connectedBody = ropeBone;
             hj.enabled = true;
             Player.GetComponent<Movement>().enabled = false;
@@ -118,6 +120,7 @@ public class Swing : MonoBehaviour
         Player.GetComponent<Movement>().enabled = true;
         bigCol.enabled = true;
         isOKtoAttach = false;
+        Invoke("TurnAttachTrue", 1.5f);
         //rb.freezeRotation = true;
     }
 
