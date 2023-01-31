@@ -7348,6 +7348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1484716291}
   empty: {fileID: 862801636}
+  Noises: {fileID: 8300000, guid: 9535bbf537c2a7842af6116e5098e7f3, type: 3}
 --- !u!61 &862801639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7446,6 +7447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1386039959}
   empty: {fileID: 878129323}
+  Noises: {fileID: 8300000, guid: 9535bbf537c2a7842af6116e5098e7f3, type: 3}
 --- !u!61 &878129326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9304,6 +9306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1225682913}
   empty: {fileID: 1182679209}
+  Noises: {fileID: 8300000, guid: 9535bbf537c2a7842af6116e5098e7f3, type: 3}
 --- !u!61 &1182679212
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9710,6 +9713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 329774098}
   empty: {fileID: 1235448386}
+  Noises: {fileID: 8300000, guid: 9535bbf537c2a7842af6116e5098e7f3, type: 3}
 --- !u!1001 &1295257352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41230,6 +41234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 131729769}
   empty: {fileID: 2020153922}
+  Noises: {fileID: 8300000, guid: 9535bbf537c2a7842af6116e5098e7f3, type: 3}
 --- !u!61 &2020153925
 BoxCollider2D:
   m_ObjectHideFlags: 0

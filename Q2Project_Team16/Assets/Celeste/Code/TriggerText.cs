@@ -7,7 +7,8 @@ public class TriggerText : MonoBehaviour
 {
     public GameObject obj;
     public GameObject empty;
-
+    public AudioClip Noises;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,13 @@ public class TriggerText : MonoBehaviour
         if (collision.tag == "Player")
         {
             obj.SetActive(true);
+            
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
+        AudioSource.PlayClipAtPoint(Noises, transform.position);
         empty.SetActive(false);
     }
 
