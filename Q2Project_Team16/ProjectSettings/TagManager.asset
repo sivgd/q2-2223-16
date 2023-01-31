@@ -9,6 +9,7 @@ TagManager:
   - JumpItem
   - Enemy
   - Wall
+  - Pit
   layers:
   - Default
   - TransparentFX

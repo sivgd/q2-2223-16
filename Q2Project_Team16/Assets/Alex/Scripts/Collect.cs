@@ -8,6 +8,8 @@ public class Collect : MonoBehaviour
     public GameObject player;
     public ParticleSystem ps;
     public ParticleSystem jumpReady;
+    public AudioSource source;
+    public AudioClip bubbles;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class Collect : MonoBehaviour
             StartCoroutine(Delay());
             ps.Stop();
             jumpReady.Play();
+            source.PlayOneShot(bubbles);
         }
     }
     IEnumerator Delay()

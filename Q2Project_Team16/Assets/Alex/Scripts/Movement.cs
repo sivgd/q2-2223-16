@@ -17,7 +17,9 @@ public class Movement : MonoBehaviour
     public Swing sw;
     public AudioSource source;
     public AudioClip boing;
-    public AudioClip bubbles;
+    public AudioClip fall;
+    public AudioClip ribbit;
+    public bool alreadyPlayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -92,9 +94,15 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "JumpItem" && jumpForce == 11)
+        if (collision.tag == "Pit" && alreadyPlayed == false)
         {
-            //source.PlayOneShot(bubbles);
+            source.PlayOneShot(fall);
+            alreadyPlayed = true;
+        }
+        if (collision.tag == "Enemy" && alreadyPlayed == false)
+        {
+            source.PlayOneShot(ribbit);
+            alreadyPlayed = true;
         }
     }
 }
