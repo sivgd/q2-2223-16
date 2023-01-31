@@ -9533,7 +9533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235448386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.65, y: 8.4, z: 0}
+  m_LocalPosition: {x: 77.24, y: 8.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 650792038}
@@ -13422,6 +13422,8 @@ CompositeCollider2D:
         Y: 127873271
       - X: 700501081
         Y: 127709184
+      - X: 700244087
+        Y: 127537849
       - X: 700000100
         Y: 127375186
       - X: 700000100
@@ -13666,8 +13668,8 @@ CompositeCollider2D:
         Y: -30871004
       - X: 785580500
         Y: -32032266
-      - X: 784677343
-        Y: -34741911
+      - X: 785294948
+        Y: -32888977
       - X: 784677343
         Y: -34741912
       - X: 784677340
@@ -14112,8 +14114,6 @@ CompositeCollider2D:
         Y: -20870982
       - X: 384999905
         Y: -20871004
-      - X: 385322490
-        Y: -21516150
       - X: 385580559
         Y: -22032269
       - X: 384677343
