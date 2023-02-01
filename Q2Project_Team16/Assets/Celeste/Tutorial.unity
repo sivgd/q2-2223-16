@@ -31989,8 +31989,8 @@ CompositeCollider2D:
         Y: 127997283
       - X: 690747204
         Y: 127873271
-      - X: 690318215
-        Y: 127587269
+      - X: 690501081
+        Y: 127709184
       - X: 690000100
         Y: 127375186
       - X: 690000100
@@ -32235,6 +32235,8 @@ CompositeCollider2D:
         Y: -30871004
       - X: 785580500
         Y: -32032266
+      - X: 784677343
+        Y: -34741911
       - X: 784677343
         Y: -34741912
       - X: 784677340
@@ -32679,6 +32681,8 @@ CompositeCollider2D:
         Y: -20870982
       - X: 384999905
         Y: -20871004
+      - X: 385322490
+        Y: -21516150
       - X: 385580559
         Y: -22032269
       - X: 384677343
@@ -59844,6 +59848,10 @@ PrefabInstance:
     - target: {fileID: 7547576262476336684, guid: 0e76280d89cecc847b626fa9be566e9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7547576262918482627, guid: 0e76280d89cecc847b626fa9be566e9c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7547576262918482649, guid: 0e76280d89cecc847b626fa9be566e9c, type: 3}
       propertyPath: anim
