@@ -9883,7 +9883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1362287482788694936}
-  pushForce: 3
+  pushForce: 10
   attached: 0
   attachedTo: {fileID: 0}
   bigCol: {fileID: 97592950}
