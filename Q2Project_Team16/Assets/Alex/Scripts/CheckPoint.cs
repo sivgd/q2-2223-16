@@ -9,6 +9,7 @@ public class CheckPoint : MonoBehaviour
     public ParticleSystem activate;
     public ParticleSystem saved;
     public bool isSaved = false;
+    public AudioSource chp;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class CheckPoint : MonoBehaviour
             lastpos = transform.position;
             if (isSaved == false)
             {
+                chp.Play();
                 activate.Play();
                 StartCoroutine(Delay());
                 isSaved = true;

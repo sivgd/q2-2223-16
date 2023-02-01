@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     public AudioSource source;
     public AudioClip boing;
     public AudioClip fall;
+    public AudioClip monkey;
     public AudioClip ribbit;
     public bool alreadyPlayed = false;
 
@@ -97,6 +98,7 @@ public class Movement : MonoBehaviour
         if (collision.tag == "Pit" && alreadyPlayed == false)
         {
             source.PlayOneShot(fall);
+            source.PlayOneShot(monkey);
             alreadyPlayed = true;
         }
         if (collision.tag == "Enemy" && alreadyPlayed == false)

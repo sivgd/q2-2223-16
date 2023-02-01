@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GoToNextLevel : MonoBehaviour
 {
     public string Scene;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,14 @@ public class GoToNextLevel : MonoBehaviour
         if(collision.tag == "Player")
         {
             Debug.Log("Switch scene");
-            SceneManager.LoadScene("AlexScene");
+            StartCoroutine(Delay());
         }
+    }
+
+    IEnumerator Delay()
+    {
+        anim.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("AlexScene");
     }
 }
