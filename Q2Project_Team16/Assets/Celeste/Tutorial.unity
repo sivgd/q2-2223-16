@@ -26734,6 +26734,7 @@ GameObject:
   - component: {fileID: 1018161212}
   - component: {fileID: 1018161211}
   - component: {fileID: 1018161210}
+  - component: {fileID: 1018161214}
   m_Layer: 5
   m_Name: Response2
   m_TagString: Untagged
@@ -26868,6 +26869,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018161208}
   m_CullTransparentMesh: 1
+--- !u!114 &1018161214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018161208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eb28913e3ccb649b1c0373db1d65b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1018161208}
 --- !u!1 &1024392150
 GameObject:
   m_ObjectHideFlags: 0
@@ -28226,6 +28240,7 @@ GameObject:
   - component: {fileID: 1208083341}
   - component: {fileID: 1208083344}
   - component: {fileID: 1208083345}
+  - component: {fileID: 1208083346}
   m_Layer: 5
   m_Name: Response
   m_TagString: Untagged
@@ -28373,6 +28388,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Noises: {fileID: 8300000, guid: 1b15ba29e57366945969880413d90038, type: 3}
+--- !u!114 &1208083346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208083339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eb28913e3ccb649b1c0373db1d65b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1208083339}
 --- !u!1 &1212358485
 GameObject:
   m_ObjectHideFlags: 0
@@ -33172,8 +33200,8 @@ CompositeCollider2D:
         Y: -30871004
       - X: 785580500
         Y: -32032266
-      - X: 784677343
-        Y: -34741911
+      - X: 785294948
+        Y: -32888977
       - X: 784677343
         Y: -34741912
       - X: 784677340
@@ -33618,8 +33646,6 @@ CompositeCollider2D:
         Y: -20870982
       - X: 384999905
         Y: -20871004
-      - X: 385322490
-        Y: -21516150
       - X: 385580559
         Y: -22032269
       - X: 384677343
