@@ -5,26 +5,20 @@ using UnityEngine;
 public class StartPos : MonoBehaviour
 {
 
-    public static Vector2 lastpos;
+    public static Vector3 startPos;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.position = lastpos;
+        startPos = player.transform.position;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == "Player")
         {
-            lastpos = transform.position;
-
+            player.transform.position = startPos;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
