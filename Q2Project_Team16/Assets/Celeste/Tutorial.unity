@@ -6775,7 +6775,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ooo!Ooo! Make sure to use A and S to move on the vine!!
+  m_Text: Ooo!Ooo! Make sure to use A and D to move on the vine!!
 --- !u!222 &546994108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33467,8 +33467,8 @@ CompositeCollider2D:
         Y: -30871004
       - X: 785580500
         Y: -32032266
-      - X: 785294948
-        Y: -32888977
+      - X: 785303192
+        Y: -32864245
       - X: 784677343
         Y: -34741912
       - X: 784677340
@@ -33913,6 +33913,8 @@ CompositeCollider2D:
         Y: -20870982
       - X: 384999905
         Y: -20871004
+      - X: 385322490
+        Y: -21516150
       - X: 385580559
         Y: -22032269
       - X: 384677343
